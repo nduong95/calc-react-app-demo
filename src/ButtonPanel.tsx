@@ -106,13 +106,13 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({onRefresh, didCalculate} : But
 
         switch(properties.operator) {
         case CalcAction.plus:
-            return one + two;
+            return Number((one + two).toPrecision(12));
         case CalcAction.divide:
-            return one / two;
+            return Number((one / two).toPrecision(12));
         case CalcAction.multiply:
-            return one * two;
+            return Number((one * two).toPrecision(12));
         case CalcAction.subtract:
-            return one - two;
+            return Number((one - two).toPrecision(12));
         default:
             return null;
         }
